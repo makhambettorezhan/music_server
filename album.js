@@ -1,13 +1,13 @@
 var unirest = require("unirest");
 
-
+const APIKEY = '6c993b9193mshcc8f4b5fecb4f37p17ec7djsn26c33c7f853f';
 
 const album = (id, callback) => {
 	var req = unirest("GET", "https://deezerdevs-deezer.p.rapidapi.com/album/" + id);
 
 	req.headers({
 		"x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
-		"x-rapidapi-key": "8ed411b6c6msh6da23a5719ea603p154f6fjsn10c332c3e72a",
+		"x-rapidapi-key": APIKEY,
 		"useQueryString": true
 	});
 

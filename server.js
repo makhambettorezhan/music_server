@@ -23,18 +23,13 @@ app.use(express.static(__dirname + '/public'))
 const port = process.env.PORT || 3000;
 
 app.get('/search', (req, res, next) => {
-	//var string;
 	search(req.query.title, string => {
 		res.send(string);
 	});
-	
-	//res.render('index.hbs', {
-	//	pageTitle: 'Welcome to the Music Site'
-	//});
 });
 
-app.get('/album', (req, res, next) => {
-	album(req.query.id, album => {
+app.get('/album/:id', (req, res, next) => {
+	album(req.params.id, album => {
 		res.json({ 
 			'Title': album.title,
 			'Cover': album.cover_medium,

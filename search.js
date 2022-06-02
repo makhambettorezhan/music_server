@@ -15,7 +15,6 @@ const search = (title, callback) => {
 
 
 	req.end(function (res) {
-
 		callback(res.body);
 	});
 
