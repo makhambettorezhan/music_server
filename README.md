@@ -12,3 +12,8 @@ npm start
 ```
 http://localhost:3000/search?title=Fade To Black
 ```
+
+## Output certain album
+```
+http://localhost:3000/album/12047944
+```
